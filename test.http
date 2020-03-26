@@ -1,0 +1,30 @@
+// test.http
+@url=http://localhost:3000
+ 
+### 
+post {{url}}/users/login
+Content-Type: application/json
+
+{
+ "username": "admin1",
+ "password": "123456"
+}
+
+### 
+post {{url}}/users/register
+Content-Type: application/json
+
+{
+ "username": "admin1",
+ "password": "123456"
+}
+
+### 
+get {{url}}/articles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNzg2MjI4NzQ0NjQxMjRiYzdmMDE4YiIsImlhdCI6MTU4NDk1MTk2OCwiZXhwIjoxNTg0OTUzNzY4fQ.zeogP-nQpRF0zsg_MIUDrvMNTOzompkSE2dg-Kgsnjw
+
+### 
+get {{url}}/articles/list
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNzg2MjI4NzQ0NjQxMjRiYzdmMDE4YiIsImlhdCI6MTU4NDk1MTk2OCwiZXhwIjoxNTg0OTUzNzY4fQ.zeogP-nQpRF0zsg_MIUDrvMNTOzompkSE2dg-Kgsnjw
